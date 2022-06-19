@@ -179,7 +179,7 @@ body{
   text-transform: capitalize;  
   font-size: 2rem;  
   display: block;  
-  background: transparent;  
+  background: rgba(0, 0, 0, 0.19);  
   cursor: pointer;  
   transition: all 0.3s linear;  
   letter-spacing: .25rem;  
@@ -238,7 +238,7 @@ body{
 } 
 
 .tab-btn.active {  
-  background: rgba(0, 0, 0, 0.19);  
+  background: transparent;  
   color: #fff;
 }  
 .content.active {  
@@ -246,19 +246,63 @@ body{
   height: 100%;
 }  
 
+
+
+/* edu */
+
+.content__edu-intro{
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: #fff;
+}
+
+.content__edu-header{
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+
+.content__edu-desc{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex: 1;
+  font-size: 3.6rem;
+  flex-direction: column;
+  line-height: 40px;
+}
+
 .university__vision{
   position: relative;
+  cursor: pointer;
+}
+
+.university__vision:hover .university{
+  display: block;
 }
 
 .university{
   position: absolute;
-  top: 0;
-  width: 200px;   
+  bottom: 46px;
+  left: 0;
+  right: 0;   
   z-index: 2;
-
   border-radius: 3px;
   box-shadow: 0 1px 2px #e0e0e0;
-  display: block;
+  background-color: #fff;
+  display: none;
+}
+
+.university::after{
+  position: absolute;
+  bottom: 46px;
+  left: 0;
+  right: 0;  
+  height: 12px;
 }
 
 .university img{
@@ -266,6 +310,7 @@ body{
 }
 
 .link{
-  color: rgb(24, 7, 177) !important;
+  color: rgb(0, 42, 255) !important;
   font-size: 2rem;
+  text-decoration: none;
 }

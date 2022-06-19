@@ -50,6 +50,13 @@
     color: white;
     }
 
+    .view1{
+        margin: 0 20px;
+        padding-top: 20px;
+        height: 100vw;
+        width: calc(100vw - 40px);
+    }
+
     .view1__card-img{
         background-position: center;
         transform: scale(1);
@@ -57,7 +64,16 @@
     
     .tab{
         height: calc(100vh - 40px);
-        margin-top: 100px;
+        margin-top: 50px;
+    }
+
+    .tab-btn{
+        font-size: 1.6rem;
+    }
+
+    .about-content{
+        padding: 0 16px;
+        height: 60%;
     }
 
     .content__info {
@@ -74,6 +90,14 @@
 
     .content__info-left-item, .content__info-right-item{
         padding: 20px 0;
+    }
+
+    .content__edu-header{
+        font-size: 3rem;
+
+    }
+    .content__edu-desc{
+        font-size: 1.6rem;
     }
 }
 

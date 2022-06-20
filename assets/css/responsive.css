@@ -99,5 +99,36 @@
     .content__edu-desc{
         font-size: 1.6rem;
     }
+
+
+    /* view 3 */
+    .view3__content{
+        width: 100vw;
+
+        overflow: auto;
+    }
+
+    .panel{
+        height: 100px;
+        border-radius: 10px;
+        border: 2px solid #fff;
+    }
+
+    .view3__heading{
+        font-size: 2.3rem;
+      }
+
+    .panel h3{
+        font-size: 1.2rem;
+        height: 15px;
+        display: flex;
+        flex-wrap: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .view3__content{
+        flex-wrap: wrap;
+    }
+
 }
 

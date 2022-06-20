@@ -405,6 +405,8 @@ body{
   align-items: center;
   justify-content: center;
   font-weight: 700;
+  text-shadow: 0 0 15px;
+  animation: textchange 1s infinite linear;
 }
 
 .view3__content{
@@ -416,25 +418,26 @@ body{
 
 
 .panel {
-  background-size: auto 110%;
+  background-size: auto 125%;
   background-position: center;
   background-repeat: no-repeat;
   height: 80vh;
   border-radius: 50px;
   color: #fff;
-  cursor: pointer;
+  /* cursor: pointer; */
   flex: 0.5;
   margin: 10px;
   position: relative;
   transition: flex .7s ease-in;
   -webkit-transition: all 700ms ease-in;
-  
+  animation: textchange 1s infinite linear;
 }
 .panel h3{
   font-size: 2.4rem;
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  left: 30px;
+  right: 30px;
   margin: 0;
   height: 30px;
   padding: 0 10px;
@@ -443,11 +446,34 @@ body{
   align-items: center;
   justify-content: center;
   opacity: 0;
-  background-color: #131313;
+  /* animation: textchange 1s infinite linear; */
+
+  /* background-color: #131313; */
+}
+
+.view3__linkto{
+  font-size: 2.4rem;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  right: 30px;
+  margin: 0;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  text-decoration: none;
+  color: #fff;
+  /* animation: textchange 1s infinite linear; */
+
 }
 
 .panel:hover{
   flex: 5;
+  box-shadow: 0 0 15px;
 }
 
 .panel:hover h3{
@@ -455,6 +481,24 @@ body{
   transition: opacity .3s ease-in .4s;
 }
 
+.panel:hover .view3__linkto{
+  opacity: 1;
+  transition: opacity .3s ease-in .4s;
+}
 
+@keyframes textchange{
+  0%, 100%{
+    color: deeppink;
+  }
+  25%{
+    color: deepskyblue;
+  }
+  50%{
+    color: lawngreen;
+  }
+  75%{
+    color: yellow;
+  }
+}
 
 

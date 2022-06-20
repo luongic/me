@@ -1,3 +1,5 @@
+
+// Tab view 1 control
 const about = document.querySelector(".about");  
  const btns = document.querySelectorAll(".tab-btn");  
  const articles = document.querySelectorAll(".content");  
@@ -17,3 +19,13 @@ const about = document.querySelector(".about");
    element.classList.add("active");  
   }  
  });  
+
+
+
+// panel view 3 control
+
+const panels = document.querySelectorAll(".panel")
+
+panels.forEach((panel) => {
+    panel.addEventListener("cl")
+})

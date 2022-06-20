@@ -102,16 +102,32 @@
 
 
     /* view 3 */
-    .view3__content{
-        width: 100vw;
 
-        overflow: auto;
+    .view3{
+        padding: 0 20px;
+        position: absolute;
+        height: unset;
+    }
+
+    .view3__heading{
+        height: 50px;
+      }
+    .view3__content{
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        align-items: center;
+        justify-content: center;
     }
 
     .panel{
-        height: 100px;
+        background-size: auto 210%;
+        height: 12vh;
         border-radius: 10px;
         border: 2px solid #fff;
+        animation: textchange 0s;
+        width: 250px;
     }
 
     .view3__heading{
@@ -120,15 +136,21 @@
 
     .panel h3{
         font-size: 1.2rem;
-        height: 15px;
+        height: 12px;
         display: flex;
-        flex-wrap: nowrap;
-        text-overflow: ellipsis;
+        opacity: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        animation: textchange 0s;
+        background-color: #131313;
+
     }
 
-    .view3__content{
-        flex-wrap: wrap;
+    .view3__linkto{
+        display: none;
     }
+
 
 }
 

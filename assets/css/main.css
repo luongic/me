@@ -94,16 +94,16 @@ body{
 
 @keyframes slideAvatar {
   0%{
-    background-image: url('/assets/image/per.png');
+    background-image: url('./assets/image/per.png');
   }
   25%{
-    background-image: url('/assets/image/avt-9.jpg');
+    background-image: url('./assets/image/avt-9.jpg');
   }
   50%{
-    background-image: url('/assets/image/bg2.jpg');
+    background-image: url('./assets/image/bg2.jpg');
   }
   100%{
-    background-image: url('/assets/image/bg3.jpg');
+    background-image: url('./assets/image/bg3.jpg');
   }
 }
 
@@ -154,17 +154,17 @@ body{
 }
 
 .main_view1{
-  background-image: url(/assets/image/bg1.jpg);
+  background-image: url(./assets/image/bg1.jpg);
   /* background-color: black; */
 }
 
 .main_view2{
-  background-image: url(/assets/image/bg2.jpg);
+  background-image: url(./assets/image/bg2.jpg);
 
 }
 
 .main_view3{
-  background-image: url(/assets/image/bg3.jpg);
+  background-image: url(./assets/image/bg3.jpg);
 }
 
 .main_view4{

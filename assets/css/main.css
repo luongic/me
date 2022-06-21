@@ -146,8 +146,9 @@ body{
 }
 
 .main_view2{
-
+  
 }
+
 
 .main_view3{
   
@@ -388,6 +389,63 @@ body{
 
 /* View 2 */
 
+.view2{
+  width: 100vw;
+  padding: 0 100px;
+  
+}
+
+.view2__heading{
+  height: 100px;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  
+}
+
+.view2__heading-container{
+  position: relative;
+}
+
+.view2__heading-container span{
+  mix-blend-mode: difference;
+}
+
+.view2__heading-container::after{
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  top: -20px;
+  width: calc(50% + 20px);
+  background-color: #fff;
+  z-index: -1;
+  color: #131313;
+  overflow: hidden;
+  animation: slideText 4s infinite linear;
+}
+
+@keyframes slideText {
+  0%, 100%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(100%);
+  }
+}
+
+
+.view2__content{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 /* View3 */
 
@@ -406,7 +464,7 @@ body{
   justify-content: center;
   font-weight: 700;
   text-shadow: 0 0 15px;
-  animation: textchange 1s infinite linear;
+  animation: textchange 4s infinite linear;
 }
 
 .view3__content{
@@ -430,7 +488,8 @@ body{
   position: relative;
   transition: flex .7s ease-in;
   -webkit-transition: all 700ms ease-in;
-  animation: textchange 1s infinite linear;
+  animation: textchange 4s infinite linear;
+  filter: grayscale(100%);
 }
 .panel h3{
   font-size: 2.4rem;
@@ -474,6 +533,8 @@ body{
 .panel:hover{
   flex: 5;
   box-shadow: 0 0 15px;
+  filter: grayscale(0%);
+
 }
 
 .panel:hover h3{
@@ -484,6 +545,10 @@ body{
 .panel:hover .view3__linkto{
   opacity: 1;
   transition: opacity .3s ease-in .4s;
+}
+.view3__linkto:hover{
+  animation: textchange 1s infinite linear; 
+
 }
 
 @keyframes textchange{

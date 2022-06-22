@@ -412,6 +412,7 @@ body{
 
 .view2__heading-container span{
   mix-blend-mode: difference;
+  
 }
 
 .view2__heading-container::after{
@@ -440,10 +441,79 @@ body{
 
 .view2__content{
   display: flex;
-  width: 100%;
+  height: calc(100vh - 100px);
+  padding-bottom: 100px;
   align-items: center;
   justify-content: center;
 }
+
+.view2__content-container{
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.view2__content-item{
+  width: 33.3333%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Source Code Pro', monospace;
+  cursor: pointer;
+  backdrop-filter: blur(3px);
+  background-image: unset;
+  background-size: auto 90%;
+  background-position: center;
+  text-shadow: 0 0 4px rgb(255, 255, 255);
+  font-weight: 700;
+  transition: all .1s;
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.view2__content-item:hover{
+  color: #fff;
+  text-shadow: 0 0 10px #131313;
+  backdrop-filter: unset;
+  mix-blend-mode: unset;
+  -webkit-backdrop-filter: unset;
+}
+
+.view2__content-item:hover span{
+  font-size: 3.6rem;
+  transition: all .8s;
+}
+
+.view2__content-item:nth-child(1),
+.view2__content-item:nth-child(2),
+.view2__content-item:nth-child(4),
+.view2__content-item:nth-child(5){
+  border-right: 1px solid #fff;
+}
+
+.view2__content-item:nth-child(1),
+.view2__content-item:nth-child(2),
+.view2__content-item:nth-child(3){
+  border-bottom: 1px solid #fff;
+}
+
+
+
+
+
+@keyframes unblur {
+  from{
+    backdrop-filter: blur(3px);
+  }
+  to{
+    backdrop-filter: blur(0px);
+  }
+}
+
 
 
 
@@ -534,7 +604,7 @@ body{
   flex: 5;
   box-shadow: 0 0 15px;
   filter: grayscale(0%);
-
+  cursor: pointer;
 }
 
 .panel:hover h3{

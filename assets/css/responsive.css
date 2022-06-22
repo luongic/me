@@ -100,6 +100,48 @@
         font-size: 1.6rem;
     }
 
+    /* View2 */
+
+    .view2{
+        padding: 0 20px;
+    }
+
+    .view2__heading{
+        height: 50px;
+        font-size: 3rem;
+        
+    }
+
+    .view2__heading-container{
+        
+    }
+
+    
+
+    .view2__heading-container::after{
+        height: 100%;
+        bottom: 0;
+        top: unset;
+    }
+
+    .view2__content-container{
+        
+    }
+
+    .view2__content-item:hover{
+        -webkit-backdrop-filter: unset;
+    }
+
+    .view2__content-item{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .view2__content-item:hover span{
+        font-size: 1.6rem;
+        transition: all .1s;
+    }
+
 
     /* view 3 */
 
@@ -113,7 +155,7 @@
         height: 50px;
       }
     .view3__content{
-        width: 90vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
         height: 80vh;
@@ -122,32 +164,57 @@
     }
 
     .panel{
-        background-size: auto 210%;
+        background-size: auto 150%;
         height: 12vh;
         border-radius: 10px;
         border: 2px solid #fff;
         animation: textchange 0s;
-        width: 250px;
+        width: 100%;
+        transition: all 1s;
+    }
+
+    .panel:hover{
+        flex: 5;
+        background-size: auto 85%;
+        box-shadow: 0 0 15px;
+        filter: grayscale(0%);
+        transition: all 1s;
     }
 
     .view3__heading{
-        font-size: 2.3rem;
+        font-size: 3rem;
       }
 
     .panel h3{
         font-size: 1.2rem;
-        height: 12px;
+        height: 20px;
         display: flex;
         opacity: 1;
-        bottom: 0;
+        bottom: 0px;
         left: 0;
         right: 0;
         animation: textchange 0s;
         background-color: #131313;
+    }
 
+    .panel:hover h3{
+        font-size: 2rem;
+        height: 20%;
+        display: flex;
+        opacity: 1;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        animation: textchange 0s;
+        background-color: #131313;
+    }
+
+    .panel:hover .view3__linkto{
+        display: flex;
     }
 
     .view3__linkto{
+        font-size: 1.6rem;
         display: none;
     }
 

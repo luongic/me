@@ -24,10 +24,41 @@ const about = document.querySelector(".about");
 
 // panel view 3 control
 
-const panels = document.querySelectorAll(".panel")
 
-panels.forEach((panel) => {
-    panel.addEventListener("cl")
-})
 
-// None backgrond image
+// get browser name
+
+                 
+let userAgent = navigator.userAgent;
+let browserName;
+const linkicon = document.querySelectorAll('.linkto__icon')
+
+if(userAgent.match(/chrome|chromium|crios/i)){
+    browserName = "chrome";
+    linkicon.forEach((icon) =>{
+        icon.innerHTML= `<i class="fa-brands fa-${browserName}"></i>`
+    })
+}else if(userAgent.match(/firefox|fxios/i)){
+    browserName = "firefox";
+    linkicon.forEach((icon) =>{
+        icon.innerHTML= `<i class="fa-brands fa-${browserName}"></i>`
+    })
+}  else if(userAgent.match(/safari/i)){
+    browserName = "safari";
+    linkicon.forEach((icon) =>{
+        icon.innerHTML= `<i class="fa-brands fa-${browserName}"></i>`
+    })
+}else if(userAgent.match(/opr\//i)){
+    browserName = "opera";
+    linkicon.forEach((icon) =>{
+        icon.innerHTML= `<i class="fa-brands fa-${browserName}"></i>`
+    })
+} else if(userAgent.match(/edg/i)){
+    browserName = "edge";
+    linkicon.forEach((icon) =>{
+        icon.innerHTML= `<i class="fa-brands fa-${browserName}"></i>`
+    })
+}else{
+    browserName="browser";
+}
+

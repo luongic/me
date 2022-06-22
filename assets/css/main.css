@@ -10,7 +10,7 @@
 
 html {
   box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Source Code Pro', monospace;
 }
 
 body{
@@ -55,8 +55,6 @@ body{
 .view1{
   margin: 0 100px;
   padding-top: 100px;
-  /* height: 100vw;
-  width: calc(100vw - 200px); */
 }
 
 .view1__card{
@@ -70,20 +68,16 @@ body{
 }
 
 .view1__card-contain-img{
-  width: calc(100% + 24px);
+  width: 100%;
   height: 500px;
 }
 
 .view1__card-img{
   width: 100%;
   height: 100%;
-  border-radius: 20px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 120%;
   background-position: center;
-  transform: scale(1.2);
   /* animation: slideAvatar 16s infinite; */
 }
 
@@ -218,7 +212,7 @@ body{
   align-self: center;
   flex-direction: column;
   justify-content: center;
-  text-shadow: #fff;
+  text-shadow: 0 0 15px #131313;
 }
 
 .content__header{
@@ -264,7 +258,7 @@ body{
   display: flex;
   align-self: center;
   flex-direction: column;
-  text-shadow: #fff;
+  text-shadow: 0 0 15px #131313;
 }
 
 .content__edu-header{
@@ -292,7 +286,7 @@ body{
 .university__vision{
   position: relative;
   cursor: pointer;
-  color: #fff;
+  color: rgb(0, 253, 160);
 }
 
 .university__vision:hover .university{
@@ -330,9 +324,10 @@ body{
 
 .content__info{
   display: flex;
-  font-size: 2rem;
+  font-size: 1.8rem;
   width: 100%;
   padding: 20px 50px;
+  text-shadow: 0 0 15px #131313;
 }
 
 .content__info-left,
@@ -408,25 +403,32 @@ body{
 
 .view2__heading-container{
   position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .view2__heading-container span{
   mix-blend-mode: difference;
-  
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .view2__heading-container::after{
   content: '';
   position: absolute;
-  bottom: -20px;
-  left: -20px;
-  top: -20px;
-  width: calc(50% + 20px);
+  bottom: 10px;
+  left: 0;
+  top: 10px;
+  width: 50%;
   background-color: #fff;
   z-index: -1;
-  color: #131313;
   overflow: hidden;
   animation: slideText 4s infinite linear;
+  -webkit-animation: slideText 4s infinite linear;
 }
 
 @keyframes slideText {
@@ -455,6 +457,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
+  
 }
 
 .view2__content-item{
@@ -463,13 +466,12 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Source Code Pro', monospace;
   cursor: pointer;
   backdrop-filter: blur(3px);
   background-image: unset;
   background-size: auto 90%;
   background-position: center;
-  text-shadow: 0 0 4px rgb(255, 255, 255);
+  text-shadow: 0 0 10px #131313;
   font-weight: 700;
   transition: all .1s;
   -webkit-backdrop-filter: blur(3px);
@@ -501,10 +503,6 @@ body{
   border-bottom: 1px solid #fff;
 }
 
-
-
-
-
 @keyframes unblur {
   from{
     backdrop-filter: blur(3px);
@@ -514,15 +512,12 @@ body{
   }
 }
 
-
-
-
 /* View3 */
 
 .view3{
   width: 100vw;
   padding: 0 100px;
-  
+  height: 100vh;
 }
 
 .view3__heading{
@@ -534,90 +529,112 @@ body{
   justify-content: center;
   font-weight: 700;
   text-shadow: 0 0 15px;
-  animation: textchange 4s infinite linear;
 }
 
 .view3__content{
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  height: calc(100% - 100px);
+  flex-wrap: wrap;
+  padding-bottom: 100px;
 }
-
 
 .panel {
-  background-size: auto 125%;
+  height: 50%;
+  width: 33.3333%;
+
+  color: #fff;
+
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.panel__container{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.panel__img{
+  position: relative;
+  height: calc(100%);
+  width: calc(100%);
+  background-color: #000;
+  border-radius: 20px;
+  background-size: auto 90%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
-  color: #fff;
-  /* cursor: pointer; */
-  flex: 0.5;
-  margin: 10px;
-  position: relative;
-  transition: flex .7s ease-in;
-  -webkit-transition: all 700ms ease-in;
-  animation: textchange 4s infinite linear;
-  filter: grayscale(100%);
+  transition: all .3s linear;
+  -webkit-transition: all .5s linear;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.496);
 }
-.panel h3{
-  font-size: 2.4rem;
-  position: absolute;
-  bottom: 20px;
-  left: 30px;
-  right: 30px;
-  margin: 0;
-  height: 30px;
-  padding: 0 10px;
-  border-radius: 10px;
+
+.panel__img:hover{
+  background-size: auto 130%;
+}
+
+.panel__img:hover .linkto__icon{
   display: flex;
+  
+}
+
+.panel h3{
+  position: absolute;
+  bottom: 0;
+  font-size: 2.3rem;
+  display: flex;
+  width: calc(100% - 40px);
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  /* animation: textchange 1s infinite linear; */
-
-  /* background-color: #131313; */
+  text-shadow: 0 0 15px #131313;
+  transition: all .3s linear;
+  -webkit-transition: all .5s linear;
 }
 
 .view3__linkto{
-  font-size: 2.4rem;
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  right: 30px;
-  margin: 0;
-  height: 30px;
-  padding: 0 10px;
-  border-radius: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  
+}
+
+.linkto__icon{
   text-decoration: none;
   color: #fff;
-  /* animation: textchange 1s infinite linear; */
-
+  font-size: 3rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 255, 191);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 28px;
+  right: 22px;
 }
 
 .panel:hover{
-  flex: 5;
-  box-shadow: 0 0 15px;
-  filter: grayscale(0%);
-  cursor: pointer;
+  
 }
 
 .panel:hover h3{
-  opacity: 1;
-  transition: opacity .3s ease-in .4s;
+  
 }
 
 .panel:hover .view3__linkto{
-  opacity: 1;
-  transition: opacity .3s ease-in .4s;
+  
 }
 .view3__linkto:hover{
-  animation: textchange 1s infinite linear; 
+  
 
 }
 

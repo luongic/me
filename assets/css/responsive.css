@@ -39,7 +39,7 @@
     .main_view1 {
         
     width: 100%;
-    height: 190vh;
+    height: 180vh;
     
     flex-shrink: 0;
     position: relative;
@@ -53,8 +53,16 @@
     .view1{
         margin: 0 20px;
         padding-top: 20px;
-        height: 100vw;
+        height: 100vh;
         width: calc(100vw - 40px);
+    }
+
+    .view1__card{
+        height: calc(100vh - 140px);
+    }
+
+    .view1__tabinfo{
+        height: 100vh;
     }
 
     .view1__card-img{
@@ -63,12 +71,18 @@
     }
     
     .tab{
-        height: calc(100vh - 80px);
+        height: calc(100vh - 130px);
         margin-top: 50px;
     }
 
     .tab-btn{
-        font-size: 1.6rem;
+        font-size: 1.0rem;
+        -webkit-transition: all .1s ease;
+    }
+
+    .tab-btn.active{
+        font-size: 1.3rem;
+        
     }
 
     .about-content{
@@ -76,9 +90,13 @@
         height: 60%;
     }
 
+    .content__header{
+        font-size: 3.6rem;
+    }
+
     .content__info {
         display: block;
-        font-size: 2rem;
+        font-size: 1.6rem;
         width: 100%;
         padding: 0;
         margin: auto 0;
@@ -97,7 +115,9 @@
 
     }
     .content__edu-desc{
-        font-size: 1.6rem;
+        font-size: 2rem;
+        text-decoration: underline;
+        text-decoration-color: rgb(0, 253, 160);
     }
 
     /* View2 */
@@ -108,24 +128,28 @@
 
     .view2__heading{
         height: 50px;
-        font-size: 3rem;
+        
         
     }
 
     .view2__heading-container{
-        
+        height: 100%;
+        position: relative;
     }
 
+    .view2__heading-container span{
+        font-size: 3rem;
+    }
     
 
     .view2__heading-container::after{
         height: 100%;
         bottom: 0;
-        top: unset;
+        top: 0;
     }
 
     .view2__content-container{
-        
+        overflow: hidden;
     }
 
     .view2__content-item:hover{
@@ -139,11 +163,16 @@
 
     .view2__content-item:hover span{
         font-size: 1.6rem;
-        transition: all .1s;
+        transition: all .3s;
     }
 
 
     /* view 3 */
+
+    .main_view3{
+        position: relative;
+        height: 200vh;
+    }
 
     .view3{
         padding: 0 20px;
@@ -153,70 +182,64 @@
 
     .view3__heading{
         height: 50px;
-      }
+    }
+
     .view3__content{
         width: 100%;
         display: flex;
         flex-direction: column;
-        height: 80vh;
+        height: calc(200vh - 70px);
         align-items: center;
         justify-content: center;
     }
 
     .panel{
-        background-size: auto 150%;
-        height: 12vh;
-        border-radius: 10px;
-        border: 2px solid #fff;
-        animation: textchange 0s;
         width: 100%;
-        transition: all 1s;
+        height: calc(100%/5);
     }
 
-    .panel:hover{
-        flex: 5;
-        background-size: auto 85%;
-        box-shadow: 0 0 15px;
-        filter: grayscale(0%);
-        transition: all 1s;
+    .panel__container{
+        
     }
 
     .view3__heading{
         font-size: 3rem;
-      }
+        position: sticky;
+        top: 0;
+        color: #000;
+        text-shadow: 0 0 15px #fff;
+        background-color: #000;
+        width: calc(100vw + 20px);
+        margin-left: -20px;
+        z-index: 1;
+        margin-top: 20px;
+    }
+
+    .panel__img:hover{
+        background-size: auto 120%;
+    }
 
     .panel h3{
-        font-size: 1.2rem;
-        height: 20px;
+        position: absolute;
+        bottom: 35px;
+        font-size: 2.3rem;
         display: flex;
-        opacity: 1;
-        bottom: 0px;
-        left: 0;
-        right: 0;
-        animation: textchange 0s;
-        background-color: #131313;
+        width: calc(100% - 40px);
+        align-items: center;
+        justify-content: center;
+        text-shadow: 0 0 15px #131313;
     }
 
     .panel:hover h3{
-        font-size: 2rem;
-        height: 20%;
-        display: flex;
-        opacity: 1;
-        bottom: 0px;
-        left: 0;
-        right: 0;
-        animation: textchange 0s;
-        background-color: #131313;
+        bottom: 25px;
+        font-size: 1.3rem;
     }
 
     .panel:hover .view3__linkto{
-        display: flex;
+
     }
 
-    .view3__linkto{
-        font-size: 1.6rem;
-        display: none;
-    }
+    
 
 
 }

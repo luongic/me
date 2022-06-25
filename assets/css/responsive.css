@@ -170,74 +170,72 @@
     /* view 3 */
 
     .main_view3{
-        position: relative;
-        height: 200vh;
+        position: sticky;
+        height: 100vh;
     }
 
     .view3{
         padding: 0 20px;
-        position: absolute;
+        position: sticky;
         height: unset;
     }
 
     .view3__heading{
         height: 50px;
+        font-size: 2.3rem;
+        width: 100%;
+        padding: 0;
     }
 
     .view3__content{
         width: 100%;
         display: flex;
         flex-direction: column;
-        height: calc(200vh - 70px);
+        height: calc(100vh - 70px);
         align-items: center;
         justify-content: center;
     }
 
-    .panel{
-        width: 100%;
-        height: calc(100%/5);
+    .item-container{
+        flex-direction: column;
     }
 
-    .panel__container{
-        
-    }
-
-    .view3__heading{
-        font-size: 3rem;
-        position: sticky;
-        top: 0;
-        color: #000;
-        text-shadow: 0 0 15px #fff;
-        background-color: #000;
-        width: calc(100vw + 20px);
-        margin-left: -20px;
-        z-index: 1;
-        margin-top: 20px;
-    }
-
-    .panel__img:hover{
-        background-size: auto 120%;
-    }
-
-    .panel h3{
-        position: absolute;
-        bottom: 35px;
-        font-size: 2.3rem;
-        display: flex;
-        width: calc(100% - 40px);
-        align-items: center;
-        justify-content: center;
-        text-shadow: 0 0 15px #131313;
-    }
-
-    .panel:hover h3{
-        bottom: 25px;
-        font-size: 1.3rem;
-    }
-
-    .panel:hover .view3__linkto{
+    .item{
 
     }
+    
+    .prev-item{
+      flex: 1;
+      background-size: auto 100%;
+      height: 40%;
+      background-position: center right;
+      margin-right: 20px;
+      filter: grayscale(100%);
+      width: 80%;
+
+    } 
+    
+    .curr-item{
+      flex: 2;
+      background-size: auto 55%;
+      background-repeat: no-repeat;
+      height: 100%;
+      background-position: center;
+      margin: 0 20px;
+      width: 100%;
+    } 
+    
+    .next-item{
+      flex: 1;
+      background-size: auto 100%;
+      height: 40%;
+      background-position: center left;
+      margin-left: 20px;
+      filter: grayscale(100%);
+      width: 80%;
+    } 
+    
+
 
     
 

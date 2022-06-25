@@ -72,118 +72,125 @@ if(userAgent.match(/chrome|chromium|crios/i)){
 const listPro = $('.view3__content')
 
 
-const app = {
-    
-    projects: [
-        {
-            name: 'File manager',
-            url: '/assets/image/',
-            link: ' ',
-            no: 0
-        },
-        {
-            name: 'File manager',
-            url: '/assets/image/filemanager.png',
-            link: ' ',
-            no: 1
-        },
-        {
-            name: 'Game 3D',
-            url: '/assets/image/homecoming.jpg',
-            link: ' ',
-            no: 2
-        },
-        {
-            name: 'Clone UI Shopee',
-            url: '/assets/image/shopeeUI.png',
-            link: ' ',
-            no: 3
-        },
-        {
-            name: ' ',
-            url: '/assets/image/instagramUI.png',
-            link: ' ',
-            no: 4
-        },
-        {
-            name: ' ',
-            url: '/assets/image/musicplayer.png',
-            link: ' ',
-            no: 5
-        },
-        {
-            name: ' ',
-            url: '/assets/image/',
-            link: ' ',
-            no: 6
-        }
-    ],
-    render: function(url1, url2, url3){
-    
-        const htmls = `
+const projects = [
+    {
+        name: 'No',
+        url: '/assets/image/',
+        link: 'null',
+        git: 'null'
+    },
+    {
+        name: 'File manager',
+        url: '/assets/image/filemanager.png',
+        link: 'https://github.com/luongic/FileExplorer-Using-Lucene',
+        git: 'https://github.com/luongic/FileExplorer-Using-Lucene'
+    },
+    {
+        name: 'Game 3D',
+        url: '/assets/image/homecoming.jpg',
+        link: 'https://www.youtube.com/watch?v=Pan-ITOx_Gs',
+        git: 'https://github.com/luongic/What-s-Next-Sample'
+    },
+    {
+        name: 'Clone UI Shopee',
+        url: '/assets/image/shopeeUI.png',
+        link: 'https://luongic.github.io/shopeeClone/',
+        git: 'https://github.com/luongic/shopeeClone'
+    },
+    {
+        name: 'Clone UI Instagram',
+        url: '/assets/image/instagramUI.png',
+        link: 'https://luongic.github.io/instagramUI/',
+        git: 'https://github.com/luongic/instagramUI'
+    },
+    {
+        name: 'Mini Music Player',
+        url: '/assets/image/musicplayer.png',
+        link: 'https://luongic.github.io/m2p/',
+        git: 'https://github.com/luongic/m2p'
+    },
+    {
+        name: 'No',
+        url: '/assets/image/',
+        link: 'null',
+        git: 'null'
+    }
+]
+
+const render = function(url1, url2, url3){
+    const htmls = `
             <div class="item-container">
-                <div class="item prev-item" data-index="${url1}" onclick = leftClick() style="background-image: url(${this.projects[url1].url})"></div>
-                <div class="item curr-item" data-index="${url2}" style="background-image: url(${this.projects[url2].url})"></div>
-                <div class="item next-item" data-index="${url3}" onclick = rightClick() style="background-image: url(${this.projects[url3].url})"></div>
+                <div class="item prev-item" data-index="${url1}" onclick = leftClick(this) style="background-image: url(${projects[url1].url})"></div>
+                <div class="item curr-item" data-index="${url2}" style="background-image: url(${projects[url2].url})">
+                    <div class="curr-link">
+                        <a href="${projects[url2].link}" class="" target="_blank">
+                            <i class="fa-brands fa-safari"></i>
+                        </a>
+                        <a href="${projects[url2].git}" class="" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>    
+                    
+                    <span>${projects[url2].name}</span>
+                </div>
+                <div class="item next-item" data-index="${url3}" onclick = rightClick(this) style="background-image: url(${projects[url3].url})"></div>
             </div>
             `
-        listPro.innerHTML = htmls
-    },
-
-    start: function() {
-        this.render(5, 1, 2)
-    }
+    listPro.innerHTML = htmls
 }
 
-app.start()
+
+const start = function() {
+    render(5, 1, 2)
+}
+start()
 
 const leftClick = function(){
     const prev = $('.prev-item')
     const prevItem = prev.dataset.index
-    console.log(prevItem)
-    prev.onclick = function(){
-        if (prevItem == 0){
-            app.render(5, 0, 1)
-        }
-        else if(prevItem == 1){
-            app.render(5, 1, 2)
-        }
-        else if(prevItem == 2){
-            app.render(1, 2, 3)
-        }
-        else if(prevItem == 3){
-            app.render(2, 3, 4)
-        }
-        else if(prevItem == 4){
-            app.render(3, 4, 5)
-        }
-        else{
-            app.render(4, 5, 1)
-        }
+    
+    if (prevItem == 0){
+        render(5, 0, 1)
     }
+    else if(prevItem == 1){
+        render(5, 1, 2)
+    }
+    else if(prevItem == 2){
+        render(1, 2, 3)
+    }
+    else if(prevItem == 3){
+        render(2, 3, 4)
+    }
+    else if(prevItem == 4){
+        render(3, 4, 5)
+    }
+    else{
+        render(4, 5, 1)
+    }
+    
 }
 
-const rightClick = function(){
+const rightClick = function(e){
     const next = $('.next-item')
     const nextItem = next.dataset.index
-    next.onclick = function(){
-        if (nextItem == 1){
-            app.render(5, 1, 2)
-        }
-        else if(nextItem == 2){
-            app.render(1, 2, 3)
-        }
-        else if(nextItem == 3){
-            app.render(2, 3, 4)
-        }
-        else if(nextItem == 4){
-            app.render(3, 4, 5)
-        }
-        else if(nextItem == 5){
-            app.render(4, 5, 1)
-        }
-        else{
-
-        }
+    
+    if (nextItem == 1){
+        render(5, 1, 2)
+    }
+    else if(nextItem == 2){
+        render(1, 2, 3)
+    }
+    else if(nextItem == 3){
+        render(2, 3, 4)
+    }
+    else if(nextItem == 4){
+        render(3, 4, 5)
+    }
+    else if(nextItem == 5){
+        render(4, 5, 1)
+    }
+    else{
+        render(5, 1, 2)
     }
 }
+

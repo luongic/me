@@ -556,32 +556,105 @@ body{
 
 .prev-item{
   flex: 1;
-  background-image: url(/assets/image/filemanager.png);
   background-size: auto 100%;
   height: 40%;
   background-position: center right;
   margin-right: 20px;
   filter: grayscale(100%);
+  cursor: pointer;
+  transition: .7s linear;
+
+} 
+
+.prev-item:hover{
+  background-size: auto 110%;
+  height: 45%;
+  filter: grayscale(0%);
+  transition: .7s linear;
 } 
 
 .curr-item{
-  flex: 2;
-  background-image: url(/assets/image/homecoming.jpg);
-  background-size: auto 55%;
+  flex: 4;
+  width: 100%;
+  background-size: auto 90%;
   background-repeat: no-repeat;
   height: 100%;
   background-position: center;
-  margin: 0 20px;
+  position: relative;
+  transition: .7s linear;
+  display: flex;
 } 
+
+.curr-item:hover{
+  background-size: auto 100%;
+  transition: .7s linear;
+} 
+
+.curr-item:hover .curr-link{
+  display: flex;
+  
+} 
+
+.curr-link{
+  position: absolute;
+  text-decoration: none;
+
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: #1313135f;
+}
+
+.curr-link a{
+  color: rgb(0, 253, 160);
+  font-size: 6.2rem;
+  width: 60px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  animation: fallFromTop .7s linear;
+}
+
+.curr-link i{
+  
+}
+
+
+
+.curr-item span{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  text-align: center;
+  font-weight: 700;
+}
 
 .next-item{
   flex: 1;
-  background-image: url(/assets/image/shopeeUI.png);
   background-size: auto 100%;
   height: 40%;
   background-position: center left;
   margin-left: 20px;
   filter: grayscale(100%);
+  cursor: pointer;
+  transition: .7s linear;
+
+} 
+
+.next-item:hover{
+  background-size: auto 110%;
+  height: 45%;
+  filter: grayscale(0%);
+  transition: .7s linear;
 } 
 
 
@@ -601,4 +674,11 @@ body{
   }
 }
 
-
+@keyframes fallFromTop{
+  from{
+    transform: translateY(25px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}

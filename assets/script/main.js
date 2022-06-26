@@ -139,7 +139,7 @@ const render = function(url1, url2, url3){
     listPro.innerHTML = htmls
 
     const backgroundEle = $('.view3_oder')
-    backgroundEle.style.backgroundImage = `url(${projects[url2].url})`
+    backgroundEle.style.backgroundImage = `url(.${projects[url2].url})`
 }
 
 

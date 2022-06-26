@@ -615,6 +615,7 @@ body{
 .curr-item:hover{
   background-size: auto 100%;
   transition: .5s ease;
+  cursor: pointer;
 } 
 
 .curr-item:hover .curr-link{
@@ -622,9 +623,13 @@ body{
 } 
 
 .curr-item:hover span{
-  bottom: 200px;
-  transition: .7s ease;
+  top: -1px;
+  transition: all .7s ease;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
 }
+
+
 
 .curr-link{
   position: absolute;
@@ -639,6 +644,7 @@ body{
   bottom: 0;
   background-color: #1313135f;
   border-radius: 20px;
+  transition: all .7s ease;
 }
 
 .curr-link a{

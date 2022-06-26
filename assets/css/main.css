@@ -767,77 +767,55 @@ body{
   padding: 0 100px;
 }
 
-.contact_list{
-  padding-left: 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 50px;
-  font-size: 2.3rem;
+
+.view4__content a,a:visited { color: #fff; }
+.view4__content a:hover { color: #fff; }
+
+.social {
+	float: left;
+	margin: 2em 2em; width: 100px; height: 100px; 	
+	display: block; text-align: center; line-height:103px; color: #fff;
+	
+	position: relative;
+	transform:rotateY(0deg);
+	transition:transform .25s ease-out;
+	transform-style:preserve-3d;
+}
+.social > div {
+	width: 100px; height: 100px; 
+  background: #000;
+	position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+}
+.social >.front {
+	transform:translateZ(40px);
+}
+.social >.back {
+	background: #3B5998; 
+	transform:rotateY(-100deg) translateZ(40px);
 }
 
-.contact_item{
-  border-radius: 8px;
-  padding: 8px 4px;
-  overflow: hidden;
-  transition: transform .2s, box-shadow .2s;
-}
+/*  Social Media Colors 
+	Facebook #3B5998
+	Flickr #FE0883
+	Foursquare #8FD400
+	Google+ #C63D2D
+	Instagram #4E433C
+	Linkedin #4875B4
+	Tumblr #2B4964
+	Twitter #33CCFF
+	Vimeo #86B32D
+	Youtube #FF3333
+	Dribbble #ea4c89
+*/
+.social.social-twitter > .back { background: #55ACEE; }
+.social.social-github > .back { background: #f3f3f3; color: #000; }
+.social.social-pinterest > .back { background: #e3262e; }
+.social.social-googleplus > .back { background: #dd4B39; }
+.social.social-skype > .back { background: #12A5F4; }
+.social.social-linkedin > .back { background: #4875B4; }
+.social.social-dribbble > .back { background: #ea4c89; }
 
-.contact_link{
-  text-decoration: none;
-  color: #fff;
-  
-}
-
-.contact_item:active{
-  transform:  translateX(4px) translateY(4px);
-  box-shadow: #131313 0px 0px 0px;
-}
-
-.contact_link:hover{
-
-}
-
-.contact_link.fb{
-  background-color: #1771e6;
-  box-shadow: #093e84 4px 4px 0px;
-}
-
-.contact_link.ig{
-}
-
-.contact_link.gh{
-  background-color: rgb(82, 82, 82);
-}
-
-.contact_link.sc{
-  background-color: #f25100;
-}
-
-.contact_link.yt{
-  background-color: #f10002;
-}
-
-.contact_link.tw{
-  background-color: #3199e6;
-}
-
-.contact_link.gm{
-  background-color: #f20000;
-}
-
-
-@keyframes lighting{
-  0%, 100%{
-    text-shadow: 0;
-    transform: scale(1);
-    transform: translateY(2px);
-  }
-  50%{
-    text-shadow: 0 0 18px;
-    transform: scale(1.5);
-    transform: translateY(20px);
-  }
+/* Hover */
+.social:hover {
+	transform: rotateY(100deg);
 }

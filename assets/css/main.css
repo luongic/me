@@ -781,12 +781,12 @@ body{
   text-align: center; 
   line-height:100px; 
   color: #fff;
-	
 	position: relative;
 	transform:rotateY(0deg);
 	transition:transform .25s ease-out;
-	transform-style:preserve-3d;
+	transform-style: preserve-3d;
 }
+
 .social > div {
 	width: 100px; height: 100px; 
   background: #000;
@@ -797,26 +797,13 @@ body{
   bottom: 0;
 }
 .social >.front {
-	transform:translateZ(40px);
+	transform:translateZ(-50px);
 }
 .social >.back {
 	background: #3B5998; 
-	transform:rotateY(-100deg) translateZ(40px);
+	transform:rotateY(90deg) translateZ(-50px);
 }
 
-/*  Social Media Colors 
-	Facebook #3B5998
-	Flickr #FE0883
-	Foursquare #8FD400
-	Google+ #C63D2D
-	Instagram #4E433C
-	Linkedin #4875B4
-	Tumblr #2B4964
-	Twitter #33CCFF
-	Vimeo #86B32D
-	Youtube #ff0000
-	Dribbble #ea4c89
-*/
 .social.social-twitter > .back { background: #1d9bf0; }
 .social.social-github > .back { background: #f3f3f3; color: #000; }
 .social.social-user > .back { background: #00fda0; }
@@ -826,7 +813,6 @@ body{
 .social.social-linkedin > .back { background: #4875B4; }
 .social.social-youtube > .back { background: #ff0000; }
 
-/* Hover */
 .social:hover {
-	transform: rotateY(100deg);
+	transform: rotateY(-90deg) translateZ(-25px);
 }

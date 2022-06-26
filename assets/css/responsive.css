@@ -139,6 +139,7 @@
 
     .view2__heading-container span{
         font-size: 3rem;
+        z-index: 2;
     }
     
 
@@ -146,6 +147,7 @@
         height: 100%;
         bottom: 0;
         top: 0;
+        z-index: -1;
     }
 
     .view2__content-container{
@@ -164,6 +166,7 @@
     .view2__content-item:hover span{
         font-size: 1.6rem;
         transition: all .3s;
+       
     }
 
 

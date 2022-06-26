@@ -428,14 +428,16 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 6rem;
+  line-height: 60px;
 }
 
 .view2__heading-container::after{
   content: '';
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
-  top: 10px;
+  top: 0;
   width: 50%;
   background-color: #fff;
   z-index: -1;

@@ -52,7 +52,7 @@
 
     .view1{
         margin: 0 20px;
-        padding-top: 20px;
+        padding: 20px;
         height: 100vh;
         width: calc(100vw - 40px);
     }
@@ -182,7 +182,7 @@
 
     .view3__heading{
         height: 50px;
-        font-size: 2.3rem;
+        font-size: 3rem;
         width: 100%;
         padding: 0;
     }
@@ -205,7 +205,7 @@
     }
     
     .prev-item{
-      flex: 0.5;
+      flex: 0;
       background-size: auto 100%;
       height: 30%;
       background-position: center;
@@ -223,7 +223,7 @@
     }
 
     .curr-item{
-      flex: 1.2;
+      flex: 0.8;
       background-size: auto 55%;
       background-repeat: no-repeat;
       height: 100%;
@@ -233,31 +233,39 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      border: none;
     } 
 
     .curr-item span{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 50px;
+        bottom: 30px;
         text-align: center;
-        font-weight: 700;
-        font-size: 2rem;
-        text-shadow: 0 0 15px #111;
+        font-weight: 500;
+        font-size: 1.6rem;
+        width: 50%;
+        transform: translateX(50%);
+        
       }
 
     .curr-item:hover{
         background-size: auto 60%;
         transition: .7s linear;
     } 
-
-    .curr-link{
-        transform: translateY(50%);
-        height: 50%;
+    .curr-item:hover span{
+        bottom: 20px;
+        transition: .7s ease;
     }
+
+    .curr-link {
+        transform: translateY(0%);
+        height: 100%;
+    }
+        
     
     .next-item{
-      flex: 0.5;
+      flex: 0.4;
       background-repeat: no-repeat;
       background-size: auto 100%;
       height: 30%;
@@ -273,7 +281,28 @@
         transition: .7s linear;
     }
 
+    /* View4 */
+    .view4{
+        position: sticky;
+        
+        top: 0;
+    }
 
+    .view4__heading{
+        font-size: 3rem;
+        height: 50px;
+    }
+
+    .view4__content {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        height: calc(100% - 100px);
+        flex-wrap: wrap;
+        margin-bottom: 6px;
+        padding: 0 20px;
+    }
 
     
 

@@ -37,7 +37,7 @@ body{
   flex-shrink: 0;
   position: sticky;
   top: 0;
-  font-size: 50px;
+  font-size: 5rem;
   font-weight: 500;
   color: white;
   background-repeat: no-repeat;
@@ -768,13 +768,19 @@ body{
 }
 
 
-.view4__content a,a:visited { color: #fff; }
-.view4__content a:hover { color: #fff; }
+.view4__content > a, .view4__content >a:visited { color: #fff; }
+.view4__content > a:hover { color: #fff; }
 
 .social {
-	float: left;
-	margin: 2em 2em; width: 100px; height: 100px; 	
-	display: block; text-align: center; line-height:103px; color: #fff;
+	align-items: center;
+  justify-content: center;
+	margin: 0 1em; 
+  width: 50px; 
+  height: 50px; 	
+	display: flex; 
+  text-align: center; 
+  line-height:100px; 
+  color: #fff;
 	
 	position: relative;
 	transform:rotateY(0deg);
@@ -784,7 +790,11 @@ body{
 .social > div {
 	width: 100px; height: 100px; 
   background: #000;
-	position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+	position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
 }
 .social >.front {
 	transform:translateZ(40px);
@@ -804,16 +814,17 @@ body{
 	Tumblr #2B4964
 	Twitter #33CCFF
 	Vimeo #86B32D
-	Youtube #FF3333
+	Youtube #ff0000
 	Dribbble #ea4c89
 */
-.social.social-twitter > .back { background: #55ACEE; }
+.social.social-twitter > .back { background: #1d9bf0; }
 .social.social-github > .back { background: #f3f3f3; color: #000; }
-.social.social-pinterest > .back { background: #e3262e; }
-.social.social-googleplus > .back { background: #dd4B39; }
-.social.social-skype > .back { background: #12A5F4; }
+.social.social-user > .back { background: #00fda0; }
+.social.social-soundcloud > .back { background: #f50; }
+.social.social-tiktok > .back { background: linear-gradient(90deg, #25F4EE 0%,#FE2C55 100%); color: #000; }
+.social.social-instagram > .back{ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);  }
 .social.social-linkedin > .back { background: #4875B4; }
-.social.social-dribbble > .back { background: #ea4c89; }
+.social.social-youtube > .back { background: #ff0000; }
 
 /* Hover */
 .social:hover {

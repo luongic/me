@@ -120,8 +120,8 @@ const projects = [
 const render = function(url1, url2, url3){
     const htmls = `
             <div class="item-container">
-                <div class="item prev-item" data-index="${url1}" onclick = leftClick(this) style="background-image: url(${projects[url1].url})"></div>
-                <div class="item curr-item" data-index="${url2}" style="background-image: url(${projects[url2].url})">
+                <div class="item prev-item" data-index="${url1}" onclick = leftClick(this) style="background-image: url(${projects[url1].url});"></div>
+                <div class="item curr-item" data-index="${url2}" style="background-image: url(${projects[url2].url});">
                     <div class="curr-link">
                         <a href="${projects[url2].link}" class="" target="_blank">
                             <i class="fa-brands fa-safari"></i>
@@ -133,7 +133,7 @@ const render = function(url1, url2, url3){
                     
                     <span>${projects[url2].name}</span>
                 </div>
-                <div class="item next-item" data-index="${url3}" onclick = rightClick(this) style="background-image: url(${projects[url3].url})"></div>
+                <div class="item next-item" data-index="${url3}" onclick = rightClick(this) style="background-image: url(${projects[url3].url});"></div>
             </div>
             `
     listPro.innerHTML = htmls

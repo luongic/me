@@ -80,31 +80,31 @@ const projects = [
         git: 'null'
     },
     {
-        name: 'File manager',
+        name: 'File manager ',
         url: '/assets/image/filemanager.png',
         link: 'https://github.com/luongic/FileExplorer-Using-Lucene',
         git: 'https://github.com/luongic/FileExplorer-Using-Lucene'
     },
     {
-        name: 'Game 3D',
+        name: 'Game 3D ',
         url: '/assets/image/homecoming.jpg',
         link: 'https://www.youtube.com/watch?v=Pan-ITOx_Gs',
         git: 'https://github.com/luongic/What-s-Next-Sample'
     },
     {
-        name: 'Clone UI Shopee',
+        name: 'Clone UI Shopee ',
         url: '/assets/image/shopeeUI.png',
         link: 'https://luongic.github.io/shopeeClone/',
         git: 'https://github.com/luongic/shopeeClone'
     },
     {
-        name: 'Clone UI Instagram',
+        name: 'Clone UI Instagram ',
         url: '/assets/image/instagramUI.png',
         link: 'https://luongic.github.io/instagramUI/',
         git: 'https://github.com/luongic/instagramUI'
     },
     {
-        name: 'Mini Music Player',
+        name: 'Mini Music Player ',
         url: '/assets/image/musicplayer.png',
         link: 'https://luongic.github.io/m2p/',
         git: 'https://github.com/luongic/m2p'
@@ -131,7 +131,7 @@ const render = function(url1, url2, url3){
                         </a>
                     </div>    
                     
-                    <span>${projects[url2].name}</span>
+                    <span>${projects[url2].name} </span>
                 </div>
                 <div class="item next-item" data-index="${url3}" onclick = rightClick(this) style="background-image: url(.${projects[url3].url});"></div>
             </div>

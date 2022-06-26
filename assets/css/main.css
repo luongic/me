@@ -10,7 +10,8 @@
 
 html {
   box-sizing: border-box;
-  font-family: 'Source Code Pro', monospace;
+  scroll-behavior: smooth;
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
 body{
@@ -230,6 +231,7 @@ body{
   justify-content: start;
   flex: 1;
   font-size: 2.6rem;
+  font-weight: 300;
 }
 .content__desc div{  
   flex: 1;
@@ -550,7 +552,7 @@ body{
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  text-shadow: 0 0 15px;
+  text-shadow: 0 0 15px #111;
 }
 
 .view3__content{
@@ -816,3 +818,5 @@ body{
 .social:hover {
 	transform: rotateY(-90deg) translateZ(0px);
 }
+
+

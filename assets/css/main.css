@@ -581,18 +581,17 @@ body{
   height: 100%;
   background-position: center;
   position: relative;
-  transition: .7s linear;
+  transition: .5s linear;
   display: flex;
 } 
 
 .curr-item:hover{
   background-size: auto 100%;
-  transition: .7s linear;
+  transition: .5s linear;
 } 
 
 .curr-item:hover .curr-link{
   display: flex;
-  
 } 
 
 .curr-link{
@@ -620,7 +619,7 @@ body{
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  animation: fallFromTop .7s linear;
+  animation: fallFromTop .4s linear;
 }
 
 .curr-link i{

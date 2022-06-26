@@ -760,7 +760,7 @@ body{
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
   height: calc(100% - 100px);
   flex-wrap: wrap;
   margin-bottom: 100px;
@@ -774,9 +774,9 @@ body{
 .social {
 	align-items: center;
   justify-content: center;
-	margin: 0 1em; 
-  width: 50px; 
-  height: 50px; 	
+	margin: 0; 
+  width: 100px; 
+  height: 100px; 	
 	display: flex; 
   text-align: center; 
   line-height:100px; 
@@ -814,5 +814,5 @@ body{
 .social.social-youtube > .back { background: #ff0000; }
 
 .social:hover {
-	transform: rotateY(-90deg) translateZ(-25px);
+	transform: rotateY(-90deg) translateZ(0px);
 }

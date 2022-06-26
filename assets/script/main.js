@@ -137,6 +137,9 @@ const render = function(url1, url2, url3){
             </div>
             `
     listPro.innerHTML = htmls
+
+    const backgroundEle = $('.view3_oder')
+    backgroundEle.style.backgroundImage = `url(${projects[url2].url})`
 }
 
 
@@ -144,6 +147,7 @@ const start = function() {
     render(5, 1, 2)
 }
 start()
+
 
 const leftClick = function(){
     const prev = $('.prev-item')

@@ -74,12 +74,6 @@ const listPro = $('.view3__content')
 
 const projects = [
     {
-        name: 'No',
-        url: '/assets/image/',
-        link: 'null',
-        git: 'null'
-    },
-    {
         name: 'File manager ',
         url: '/assets/image/filemanager.png',
         link: 'https://github.com/luongic/FileExplorer-Using-Lucene',
@@ -108,12 +102,6 @@ const projects = [
         url: '/assets/image/musicplayer.png',
         link: 'https://luongic.github.io/m2p/',
         git: 'https://github.com/luongic/m2p'
-    },
-    {
-        name: 'No',
-        url: '/assets/image/',
-        link: 'null',
-        git: 'null'
     }
 ]
 
@@ -144,57 +132,38 @@ const render = function(url1, url2, url3){
 
 
 const start = function() {
-    render(5, 1, 2)
+    render(projects.length - 1, 0, 1)
 }
+
 start()
 
 
 const leftClick = function(){
     const prev = $('.prev-item')
-    const prevItem = prev.dataset.index
-    
-    if (prevItem == 0){
-        render(5, 0, 1)
+    const endItem = projects.length - 1
+    let currItem = Number(prev.dataset.index) + 1
+    let prev_Item = currItem - 1
+
+    if (currItem >= projects.length){
+        currItem = 0
+        prev_Item = endItem
     }
-    else if(prevItem == 1){
-        render(5, 1, 2)
-    }
-    else if(prevItem == 2){
-        render(1, 2, 3)
-    }
-    else if(prevItem == 3){
-        render(2, 3, 4)
-    }
-    else if(prevItem == 4){
-        render(3, 4, 5)
-    }
-    else{
-        render(4, 5, 1)
-    }
-    
+
+    render((prev_Item - 1 ) >= 0 ? prev_Item - 1 : endItem, prev_Item, currItem) 
 }
 
-const rightClick = function(e){
+const rightClick = function(){
     const next = $('.next-item')
-    const nextItem = next.dataset.index
-    
-    if (nextItem == 1){
-        render(5, 1, 2)
+    const endItem = projects.length - 1
+
+    let currItem = Number(next.dataset.index) - 1
+    let next_Item = currItem + 1
+
+    if (currItem < 0){
+        currItem = endItem
+        next_Item = 0
     }
-    else if(nextItem == 2){
-        render(1, 2, 3)
-    }
-    else if(nextItem == 3){
-        render(2, 3, 4)
-    }
-    else if(nextItem == 4){
-        render(3, 4, 5)
-    }
-    else if(nextItem == 5){
-        render(4, 5, 1)
-    }
-    else{
-        render(5, 1, 2)
-    }
+
+    render( currItem, next_Item, (next_Item + 1 ) >= endItem + 1 ?  0 : next_Item + 1)
 }
 

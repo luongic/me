@@ -47,25 +47,9 @@ body{
   background-image: linear-gradient(#30cfd0 ,#004743 );
 }
 
-.main_view1{
-  
-}
-
-.main_view2{
-  
-}
-
-.main_view3{
-
-}
-
 .main_view4{
   height: 100vh;
   background-image: linear-gradient(#30cfd0 ,#004743 );
-}
-
-.main_view1{
- 
 }
 
 .view1{
@@ -137,10 +121,6 @@ body{
   flex: 1;
 }
 
-.view1__tabinfo{
-  
-}
-
 .tab{
   display: flex;
   width: 100%;
@@ -202,10 +182,6 @@ body{
 .content {  
   display: none; 
   width: 100%;
-}  
-
-.content {  
-
 }  
 
 .content__intro{
@@ -363,22 +339,6 @@ body{
   align-items: center;
 }
 
-.content__info-right-item{
-
-}
-
-.content__info-right{
-
-}
-
-.content__info-right-list{
-  
-}
-
-.content__info-right-item{
-
-}
-
 .info__title{
   margin-right: 10px;
   font-weight: 700;
@@ -514,7 +474,7 @@ body{
   }
 }
 
-.view2__content-item:nth-child(1),
+/* .view2__content-item:nth-child(1),
 .view2__content-item:nth-child(2),
 .view2__content-item:nth-child(4),
 .view2__content-item:nth-child(5){
@@ -525,7 +485,7 @@ body{
 .view2__content-item:nth-child(2),
 .view2__content-item:nth-child(3){
   border-bottom: 1px solid #fff;
-}
+} */
 
 @keyframes unblur {
   from{
@@ -573,10 +533,6 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.item{
-
 }
 
 .prev-item{
@@ -665,12 +621,6 @@ body{
   transform: scale(1.2);
   transition: .7s ease;
 }
-
-.curr-link i{
-  
-}
-
-
 
 .curr-item span{
   position: absolute;
@@ -820,8 +770,10 @@ body{
 .social.social-soundcloud > .back { background: #f50; }
 .social.social-tiktok > .back { background: linear-gradient(90deg, #25F4EE 0%,#FE2C55 100%); color: #000; }
 .social.social-instagram > .back{ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);  }
-.social.social-linkedin > .back { background: #4875B4; }
+.social.social-linkedin > .back { background: #0a66c2; }
 .social.social-youtube > .back { background: #ff0000; }
+.social.social-cv > .back { background: #029c7c; }
+
 
 .social:hover {
 	transform: rotateY(-90deg) translateZ(0px);

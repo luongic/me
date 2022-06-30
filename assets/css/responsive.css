@@ -1,3 +1,10 @@
+@media (min-width: 1024px) and (max-width: 1239px)
+{
+    .view1__card{
+        display: flex !important;
+    }
+}
+
 /* Mobile && Tablet */
 
 @media(max-width: 1023px){

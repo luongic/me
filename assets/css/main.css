@@ -44,12 +44,29 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(#30cfd0 ,#004743 );
+  /* background-image: linear-gradient(#30cfd0 ,#004743 ); */
 }
 
 .main_view4{
   height: 100vh;
   background-image: linear-gradient(#30cfd0 ,#004743 );
+}
+
+.main_view1{
+  /* background-image: url(./assets/image/bg1.jpg); */
+  background-image: linear-gradient(#575757 ,#000000 );
+
+}
+.main_view2{
+  background-image: url("/assets/image/bg2.jpg");
+  /* background-image: linear-gradient(#30cfd0 ,#004743 ); */
+}
+.main_view3{
+
+}
+.main_view4 {
+  background-image: url(./assets/image/bg3.jpg);
+  background-image: linear-gradient(#a0a0a0 ,#464646 );
 }
 
 .view1{
@@ -198,6 +215,10 @@ body{
   align-items: center;
 }
 
+.content__header>span{
+  color: #00fda0;
+  padding-left: 6px;
+}
 
 .content__desc{
   height: 50px;
@@ -224,7 +245,7 @@ body{
   font-weight: 700;
 }  
 .content.active {  
-  display: flex;   
+  display: flex;
   height: 100%;
   animation: fadeIn .5s ease;
 }  
@@ -270,12 +291,18 @@ body{
 .content__edu-desc-school{
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+}
+
+.content_line{
+  display: flex;
 }
 
 .university__vision{
   position: relative;
   cursor: pointer;
   color: rgb(0, 253, 160);
+  padding-left: 8px;
 }
 
 .university__vision:hover .university{
@@ -442,13 +469,13 @@ body{
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  backdrop-filter: blur(3px);
   background-image: unset;
   background-size: auto 90%;
   background-position: center;
   text-shadow: 0 0 10px #131313;
   font-weight: 700;
   transition: all .1s;
+  backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
 
@@ -459,11 +486,11 @@ body{
   -webkit-backdrop-filter: unset;
 }
 
-.view2__content-item:hover span{
+/* .view2__content-item:hover span{
   font-size: 3.6rem;
   transition: all .8s;
   animation: rotate360 .9s ease;
-}
+} */
 
 @keyframes rotate360{
   0%{

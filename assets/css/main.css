@@ -53,8 +53,8 @@ body{
 }
 
 .main_view1{
-  /* background-image: url(./assets/image/bg1.jpg); */
-  background-image: linear-gradient(#575757 ,#000000 );
+  background-image: url("/assets/image/bg1.jpg");
+  /* background-image: linear-gradient(#575757 ,#000000 ); */
 
 }
 .main_view2{
@@ -65,8 +65,8 @@ body{
 
 }
 .main_view4 {
-  background-image: url(./assets/image/bg3.jpg);
-  background-image: linear-gradient(#a0a0a0 ,#464646 );
+  background-image: url("/assets/image/bg3.jpg");
+  /* background-image: linear-gradient(#a0a0a0 ,#464646 ); */
 }
 
 .view1{
@@ -770,7 +770,7 @@ body{
   color: #fff;
 	position: relative;
 	transform:rotateY(0deg);
-	transition:transform .25s ease-out;
+	transition:transform .5s ease;
 	transform-style: preserve-3d;
 }
 

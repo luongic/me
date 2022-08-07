@@ -74,6 +74,12 @@ const listPro = $('.view3__content')
 
 const projects = [
     {
+        name: 'Order Pizza ',
+        url: '/assets/image/orderpizza.png',
+        link: 'https://pizzahutvn.netlify.app/',
+        git: 'https://github.com/luongic/pizza'
+    },
+    {
         name: 'File manager ',
         url: '/assets/image/filemanager.png',
         link: 'https://github.com/luongic/FileExplorer-Using-Lucene',

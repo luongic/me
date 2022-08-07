@@ -53,19 +53,19 @@ body{
 }
 
 .main_view1{
-  background-image: url("/assets/image/bg1.jpg");
+  background-image: url("../image/bg1.jpg");
   /* background-image: linear-gradient(#575757 ,#000000 ); */
 
 }
 .main_view2{
-  background-image: url("/assets/image/bg2.jpg");
+  background-image: url("../image/bg2.jpg");
   /* background-image: linear-gradient(#30cfd0 ,#004743 ); */
 }
 .main_view3{
 
 }
 .main_view4 {
-  background-image: url("/assets/image/bg3.jpg");
+  background-image: url("../image/bg3.jpg");
   /* background-image: linear-gradient(#a0a0a0 ,#464646 ); */
 }
 

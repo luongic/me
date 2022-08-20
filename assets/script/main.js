@@ -108,6 +108,18 @@ const projects = [
         url: '/assets/image/musicplayer.png',
         link: 'https://luongic.github.io/m2p/',
         git: 'https://github.com/luongic/m2p'
+    },
+    {
+        name: 'CSS Certificate',
+        url: '/assets/image/certifycateCSSHackerrank.png',
+        link: 'https://www.hackerrank.com/certificates/b41839f800cd',
+        git: 'https://www.hackerrank.com/certificates/b41839f800cd'
+    },
+    {
+        name: 'React (Basic) Certificate',
+        url: '/assets/image/certifycateReactHackerrank.png',
+        link: 'https://www.hackerrank.com/certificates/894129fd9b89',
+        git: 'https://www.hackerrank.com/certificates/894129fd9b89'
     }
 ]
 

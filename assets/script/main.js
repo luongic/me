@@ -1,6 +1,7 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
+let isImageLoading = true
 
 
 // Tab view 1 control
@@ -184,4 +185,13 @@ const rightClick = function(){
 
     render( currItem, next_Item, (next_Item + 1 ) >= endItem + 1 ?  0 : next_Item + 1)
 }
+
+// Loading All IMAGE 
+
+const loadOverlay = $('.loading')
+Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
+    isImageLoading = false
+    console.log('load finish')
+    loadOverlay.style.display = 'none'
+});
 
